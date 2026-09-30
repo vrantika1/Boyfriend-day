@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff0f5">
+<title>For You ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif}
+body{background:linear-gradient(145deg,#fff7fa,#ffe8f0);color:#542638;overflow-x:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-40px;animation:float linear forwards;opacity:.75}
+@keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+.wrap{position:relative;z-index:1;max-width:720px;margin:auto;padding:28px 18px 50px}
+.hero{text-align:center;min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.kicker{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:#b25b78}
+h1{font-size:clamp(2.3rem,10vw,4.2rem);line-height:1;margin:12px 0 10px}
+.sub{font-size:1.05rem;opacity:.75}
+.gift{margin:34px auto 18px;width:170px;height:150px;position:relative;cursor:pointer;filter:drop-shadow(0 18px 18px rgba(100,35,60,.15))}
+.box,.lid{position:absolute;left:50%;transform:translateX(-50%);background:#e985a5}
+.box{bottom:0;width:130px;height:90px;border-radius:8px 8px 14px 14px}
+.box:after{content:"";position:absolute;left:55px;top:0;width:20px;height:100%;background:#ffd0dc}
+.lid{top:36px;width:150px;height:35px;border-radius:8px}
+.lid:after{content:"";position:absolute;left:64px;top:0;width:22px;height:35px;background:#ffd0dc}
+.bow{position:absolute;top:8px;left:50%;width:70px;height:40px;transform:translateX(-50%);z-index:2}
+.bow:before,.bow:after{content:"";position:absolute;width:38px;height:28px;border:9px solid #d85d85;border-radius:50% 50% 50% 10px;top:0}
+.bow:before{left:0;transform:rotate(25deg)}.bow:after{right:0;transform:scaleX(-1) rotate(25deg)}
+.tap{font-weight:700;color:#a64e6d}
+.open .lid{animation:openlid .8s ease forwards}.open .bow{animation:bowout .8s ease forwards}
+@keyframes openlid{to{transform:translate(-50%,-75px) rotate(-8deg);opacity:.9}}
+@keyframes bowout{to{transform:translate(-50%,-90px) scale(.7);opacity:0}}
+.hidden{display:none}
+.sections{display:grid;gap:18px}
+.card{background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);border-radius:24px;padding:22px;box-shadow:0 12px 35px rgba(100,35,60,.08)}
+.num{font-size:.78rem;letter-spacing:.12em;color:#bb6683;text-transform:uppercase}
+.card h2{margin:7px 0 9px;font-size:1.35rem}.card p{line-height:1.65;margin:0}
+.photo{height:190px;border-radius:17px;background:linear-gradient(135deg,#f7c9d7,#fff1f5);display:flex;align-items:center;justify-content:center;color:#a25c75;margin-bottom:15px;font-weight:600;border:1px dashed #d99ab0}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:17px}
+.note{text-align:center;padding:36px 22px;margin-top:20px;background:#6f3049;color:white;border-radius:28px;box-shadow:0 18px 40px rgba(80,30,50,.2)}
+.note h2{font-size:2rem;margin:0 0 14px}.note p{line-height:1.7;margin:0}
+footer{text-align:center;padding:28px 0;color:#9d6377;font-size:.85rem}
+button{border:0;background:#fff;color:#8f3f5e;border-radius:999px;padding:12px 18px;font-weight:700;margin-top:18px;box-shadow:0 8px 18px rgba(80,30,50,.1)}
+.reveal{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">A little something for you</div>
+<h1>Happy Boyfriend Day ❤️</h1>
+<div class="sub">I made this tiny corner of the internet just for you.</div>
+
+<div class="gift" id="gift" aria-label="Tap to open the gift">
+  <div class="bow"></div><div class="lid"></div><div class="box"></div>
+</div>
+<div class="tap" id="tap">Tap the gift 🎁</div>
+<button id="start" class="hidden">Open my heart →</button>
+</section>
+
+<section id="content" class="hidden">
+<div class="sections">
+<article class="card reveal">
+<div class="num">01 · The little things</div>
+<h2>You make ordinary days feel special.</h2>
+<p>It’s not always the big moments. Sometimes it’s a message, a silly joke, a random conversation, or simply knowing you’re there. Those little things mean more than you know.</p>
+</article>
+
+<article class="card reveal">
+<div class="num">02 · A memory</div>
+<div class="photo">📸 Your favourite photo goes here</div>
+<p>Replace this space with a picture that instantly makes you smile.</p>
+</article>
+
+<article class="card reveal">
+<div class="num">03 · My favourite thing</div>
+<h2>Being completely myself with you.</h2>
+<p>There’s something comforting about having a person with whom you can be goofy, dramatic, quiet, annoying, affectionate—and still feel loved.</p>
+</article>
+
+<article class="card reveal">
+<div class="num">04 · Another memory</div>
+<div class="photo">📸 Add another favourite photo</div>
+<p>One picture. One memory. A thousand feelings.</p>
+</article>
+
+<article class="card reveal">
+<div class="num">05 · Just so you know</div>
+<h2>You matter to me. A lot.</h2>
+<p>Even when I don’t say it perfectly, I hope you know how much your presence means to me. I’m grateful for the laughs, the conversations, the memories, and all the little moments in between.</p>
+</article>
+
+<article class="card reveal">
+<div class="num">06 · One more thing</div>
+<div class="photo">📸 Your cutest photo together</div>
+<p>If this page could give you one thing, I’d choose a hug. Since it can’t, this will have to do for now. 🤍</p>
+</article>
+</div>
+
+<section class="note reveal">
+<h2>My final little note 💌</h2>
+<p>Happy Boyfriend Day to my favourite person. Thank you for being part of my life and for giving me so many moments worth remembering. No matter how cheesy this page is, the feeling behind it is very real. I love you, and I hope you never forget that. ❤️</p>
+</section>
+<footer>Made with love, just for you ✨</footer>
+</section>
+</main>
+
+<script>
+const hearts=document.getElementById('hearts');
+function makeHeart(){
+ const h=document.createElement('div'); h.className='heart';
+ h.textContent=['♥','♡','❤','💗','💖'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'%';
+ h.style.fontSize=(14+Math.random()*22)+'px';
+ h.style.animationDuration=(5+Math.random()*6)+'s';
+ hearts.appendChild(h);
+ setTimeout(()=>h.remove(),12000);
+}
+setInterval(makeHeart,500);
+for(let i=0;i<10;i++) setTimeout(makeHeart,i*250);
+
+const gift=document.getElementById('gift'), tap=document.getElementById('tap');
+const start=document.getElementById('start'), content=document.getElementById('content');
+gift.addEventListener('click',()=>{
+ gift.classList.add('open'); tap.textContent='A little surprise for you…';
+ setTimeout(()=>start.classList.remove('hidden'),650);
+});
+start.addEventListener('click',()=>{
+ content.classList.remove('hidden');
+ content.scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
